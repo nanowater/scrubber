@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 
 	type Segment = {
@@ -172,7 +173,7 @@
 	<div class="mx-auto flex w-full max-w-6xl flex-col">
 		<header class="mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
 			<div class="flex items-center gap-2">
-				<img src="/icon.svg" alt="Scrubber" class="h-7 w-7" />
+				<img src={`${base}/icon.svg`} alt="Scrubber" class="h-7 w-7" />
 				<h1 class="m-0 text-lg font-semibold text-slate-800">Scrubber</h1>
 			</div>
 		</header>
