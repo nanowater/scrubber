@@ -1,6 +1,6 @@
 # Scrubber
 
-Browser-first privacy filtering app built on top of [openai/privacy-filter](https://huggingface.co/openai/privacy-filter), using Svelte 5 + Vite + Transformers.js.
+Browser-first privacy filtering app built on top of [openai/privacy-filter](https://huggingface.co/openai/privacy-filter), using SvelteKit (Svelte 5) + Transformers.js.
 
 ## Features
 
@@ -19,6 +19,7 @@ Browser-first privacy filtering app built on top of [openai/privacy-filter](http
 ```bash
 npm install
 npm run dev
+npm run check
 ```
 
 ## Build
@@ -28,9 +29,18 @@ npm run build
 npm run preview
 ```
 
+This project uses SvelteKit with `@sveltejs/adapter-static`, and production output is generated in `build/`.
+
+## Project Structure
+
+- `src/routes`: SvelteKit route files (`+page.svelte`, `+layout.ts` etc.)
+- `src/lib`: Shared client modules (including worker code)
+- `static`: Static assets served as-is (icons, `robots.txt`, `sitemap.xml`)
+- `src/app.html`: SvelteKit app template and global meta tags
+
 ## Deploy (GitHub Pages)
 
-This repository includes a GitHub Actions workflow to deploy `dist/` to GitHub Pages on pushes to `main`.
+This repository includes a GitHub Actions workflow to deploy `build/` to GitHub Pages on pushes to `main`.
 
 ## Model and Runtime
 

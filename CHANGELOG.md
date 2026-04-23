@@ -6,5 +6,5 @@ All notable changes to this project will be documented in this file.
 
 - Initial public release
 - Browser-only privacy filtering UI using `openai/privacy-filter`
-- Svelte 5 + Vite + Tailwind UI
+- SvelteKit (Svelte 5) + Tailwind UI
 - WebGPU with WASM fallback in worker runtime
